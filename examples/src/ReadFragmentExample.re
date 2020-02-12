@@ -8,8 +8,7 @@ module GraphFragment = [%graphql
    |}
 ];
 
-module PersonFragment = ApolloClientReadFragment.ReadFragment(GraphFragment.PersonFields);
-
+module PersonFragment = ReasonApolloReadFragment.ReadFragment.M(GraphFragment.PersonFields);
 let get = (~fragmentType: string, ~id: string, ~fragmentName: string): option(GraphFragment.PersonFields.t) =>
   PersonFragment.read(
     ~client=Client.instance,

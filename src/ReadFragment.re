@@ -1,9 +1,9 @@
-module type ReadFragment =
+module type M =
   (Config: ReasonApolloTypes.Config) =>
     {
       let read:
         (
-          ~client: ApolloClientType.generatedApolloClient,
+          ~client: Type.generatedApolloClient,
           ~id: string,
           ~fragmentName: string=?,
           unit
@@ -19,9 +19,9 @@ type readFragmentObj = {
 };
 
 [@bs.send]
-external readFragment: (ApolloClientType.generatedApolloClient, readFragmentObj) => Js.Nullable.t(Js.Json.t) = "";
+external readFragment: (Type.generatedApolloClient, readFragmentObj) => Js.Nullable.t(Js.Json.t) = "";
 
-module ReadFragment = (Config: ReasonApolloTypes.Config) => {
+module M = (Config: ReasonApolloTypes.Config) => {
   [@bs.module] external gql: ReasonApolloTypes.gql = "graphql-tag";
 
   let read = (~client, ~id, ~fragmentName=?, ()): option(Config.t) =>

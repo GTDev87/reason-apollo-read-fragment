@@ -1,10 +1,10 @@
 {
-  "name": "reason-apollo-read-fragment",
+  "name": "reason-apollo-read-fragment-test",
   "version": "0.0.0",
   "description": "Fetch bindings for BuckleScript",
   "scripts": {
     "build": "bsb -make-world",
-    "start": "bsb -make-world -w",
+    "start": "rm -rf ../node_modules; bsb -make-world -w",
     "clean": "bsb -clean-world",
     "test": "exit 0"
   },
@@ -27,6 +27,7 @@
   "devDependencies": {
     "@glennsl/bs-json": "^3.0.0",
     "@baransu/graphql_ppx_re": "0.6.1",
+    "apollo-cache-inmemory": "^1.6.0",
     "bs-platform": "7.0.1",
     "reason-react": "^0.7.0"
   },
@@ -35,7 +36,8 @@
   },
   "dependencies": {
     "apollo-client": "2.6.8",
-    "reason-apollo": "0.18.0"
+    "reason-apollo": "0.18.0",
+    "reason-apollo-read-fragment": "../"
   },
   "main": "index.js",
   "directories": {
