@@ -1,0 +1,28 @@
+{
+  "name": "reason-apollo-read-fragment",
+  "bsc-flags": ["-bs-no-version-header", "-bs-super-errors"],
+  "refmt": 3,
+  "reason": {
+    "react-jsx": 3
+  },
+  "bs-dependencies": [
+    "@glennsl/bs-json",
+    "reason-apollo",
+    "reason-react"
+  ],
+  "package-specs": [{
+    "module": "commonjs",
+    "in-source": false
+  }],
+  "ppx-flags": ["@baransu/graphql_ppx_re/ppx6"],
+  "sources": [
+    {
+      "dir": "src",
+      "public": "all"
+    },
+    {
+      "dir": "examples",
+      "type": "dev"
+    }
+  ],
+}

@@ -1,0 +1,45 @@
+{
+  "name": "reason-apollo-read-fragment",
+  "version": "0.0.0",
+  "description": "Fetch bindings for BuckleScript",
+  "scripts": {
+    "build": "bsb -make-world",
+    "start": "bsb -make-world -w",
+    "clean": "bsb -clean-world",
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GTDev87/reason-apollo-read-fragment.git"
+  },
+  "keywords": [
+    "apollo",
+    "browser",
+    "bucklescript",
+    "reason"
+  ],
+  "author": "gtdev87",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GTDev87/reason-apollo-read-fragment/issues"
+  },
+  "homepage": "https://github.com/GTDev87/reason-apollo-read-fragment#readme",
+  "devDependencies": {
+    "@glennsl/bs-json": "^3.0.0",
+    "@baransu/graphql_ppx_re": "0.6.1",
+    "bs-platform": "7.0.1",
+    "reason-react": "^0.7.0"
+  },
+  "peerDependencies": {
+    "bs-platform": "7.0.1"
+  },
+  "dependencies": {
+    "apollo-client": "2.6.3",
+    "reason-apollo": "0.18.0"
+  },
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "lib": "lib"
+  }
+}
